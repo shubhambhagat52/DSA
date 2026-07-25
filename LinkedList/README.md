@@ -1,2 +1,2 @@
 # DSA
-Practice questions on DSA.
+Practice questions on LinkedList.
