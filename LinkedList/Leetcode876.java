@@ -29,6 +29,8 @@ class Solution {
 
 
 // single pass algo
+// Time Complexity: O(n)
+// Space Complexity: O(1)
 
 
 class Solution {
