@@ -3,6 +3,8 @@
 // Time Complexity: O(n)
 // Space Complexity: O(1)
 
+
+// two pass algo
 class Solution {
     public ListNode twoPassAlgo(ListNode head){
         ListNode curr = head;
@@ -24,3 +26,25 @@ class Solution {
         
     }
 }
+
+
+// single pass algo
+
+
+class Solution {
+    public ListNode singlePassAlgo(ListNode head) {
+        ListNode slow = head;
+        ListNode fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+
+    public ListNode middleNode(ListNode head) {
+        return singlePassAlgo(head);
+    }
+}
+  
+
