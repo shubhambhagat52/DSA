@@ -14,7 +14,7 @@ class Node {
     }
 } */
 
-// single pass  algo
+// two pass  algo
 
 
 
@@ -39,4 +39,37 @@ class Solution {
         return curr.data;
         
     }
+}
+
+// single pass algo
+
+/* Node Structure
+class Node {
+	int data;
+	Node next;
+	Node(int x) {
+		data = x;
+		next = null;
+	}
+} */
+
+// one pass algo
+
+class Solution {
+	public int getKthFromLast(Node head, int k) {
+		Node slow = head;
+		Node fast = head;
+		
+		for (int i = 0; i<k; i++) {
+       if(fast==null) return -1;
+			fast = fast.next;
+		}
+		
+		while (fast != null) {
+			fast = fast.next;
+			slow = slow.next;
+		}
+		return slow.data;
+		
+	}
 }
